@@ -59,7 +59,7 @@ func replaceMatchedStrings(text string) {
 	}
 	elapsed := time.Since(start)
 	fmt.Println("Replacing string match process took:", elapsed)
-	fmt.Print(replacedText)
+	fmt.Print("\n" + replacedText)
 }
 
 func main() {
