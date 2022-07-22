@@ -44,22 +44,22 @@ var (
 
 func findStringMatches(text string) {
 	start := time.Now()
-	for i := 1; i < 100000; i++ {
+	for i := 1; i < 1000000; i++ {
 		IPv4Regex.FindStringSubmatch(text)
 	}
 	elapsed := time.Since(start)
-	fmt.Println("Finding string match process took:", elapsed)
+	fmt.Println("Finding string match process took : ", elapsed)
 }
 
 func replaceMatchedStrings(text string) {
 	// replacedText := ""
 	start := time.Now()
-	for i := 1; i < 100000; i++ {
+	for i := 1; i < 1000000; i++ {
 		IPv4Regex.ReplaceAllString(text, "ipv4 was here")
 		// replacedText = IPv4Regex.ReplaceAllString(text, "ipv4 was here")
 	}
 	elapsed := time.Since(start)
-	fmt.Println("Replacing string match process took:", elapsed)
+	fmt.Println("Replacing string match process took : ", elapsed)
 	// fmt.Print("\n" + replacedText)
 }
 
