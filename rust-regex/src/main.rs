@@ -44,7 +44,7 @@ lazy_static! {
 fn find_string_matches(text_var :&str) {
     let start = Instant::now();
     for _i in 0..100000 {
-        IPV4_REGEX.captures(text_var);
+        IPV4_REGEX.is_match(text_var);
     }
     let duration = start.elapsed();
     println!("Finding string match process took : {:?}", duration);

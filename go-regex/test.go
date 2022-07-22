@@ -45,7 +45,7 @@ var (
 func findStringMatches(text string) {
 	start := time.Now()
 	for i := 1; i < 100000; i++ {
-		IPv4Regex.FindStringSubmatch(text)
+		IPv4Regex.MatchString(text)
 	}
 	elapsed := time.Since(start)
 	fmt.Println("Finding string match process took : ", elapsed)
