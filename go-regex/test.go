@@ -52,14 +52,15 @@ func findStringMatches(text string) {
 }
 
 func replaceMatchedStrings(text string) {
-	replacedText := ""
+	// replacedText := ""
 	start := time.Now()
 	for i := 1; i < 100000; i++ {
-		replacedText = IPv4Regex.ReplaceAllString(text, "ipv4 was here")
+		IPv4Regex.ReplaceAllString(text, "ipv4 was here")
+		// replacedText = IPv4Regex.ReplaceAllString(text, "ipv4 was here")
 	}
 	elapsed := time.Since(start)
 	fmt.Println("Replacing string match process took:", elapsed)
-	fmt.Print("\n" + replacedText)
+	// fmt.Print("\n" + replacedText)
 }
 
 func main() {
