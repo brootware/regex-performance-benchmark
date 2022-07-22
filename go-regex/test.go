@@ -44,7 +44,7 @@ var (
 
 func findStringMatches(text string) {
 	start := time.Now()
-	for i := 1; i < 1000000; i++ {
+	for i := 1; i < 100000; i++ {
 		IPv4Regex.FindStringSubmatch(text)
 	}
 	elapsed := time.Since(start)
@@ -54,7 +54,7 @@ func findStringMatches(text string) {
 func replaceMatchedStrings(text string) {
 	// replacedText := ""
 	start := time.Now()
-	for i := 1; i < 1000000; i++ {
+	for i := 1; i < 100000; i++ {
 		IPv4Regex.ReplaceAllString(text, "ipv4 was here")
 		// replacedText = IPv4Regex.ReplaceAllString(text, "ipv4 was here")
 	}

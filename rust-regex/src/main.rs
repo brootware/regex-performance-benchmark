@@ -43,7 +43,7 @@ lazy_static! {
 
 fn find_string_matches(text_var :&str) {
     let start = Instant::now();
-    for _i in 0..1000000 {
+    for _i in 0..100000 {
         IPV4_REGEX.captures(text_var);
     }
     let duration = start.elapsed();
@@ -53,7 +53,7 @@ fn find_string_matches(text_var :&str) {
 fn replace_matched_strings(text_var :&str){
     // let replaced_text = IPV4_REGEX.replace_all(text_var, "IPV4");
     let start = Instant::now();
-    for _i in 0..1000000 {
+    for _i in 0..100000 {
         IPV4_REGEX.replace(text_var, "IPv4");
     }
     let duration = start.elapsed();
