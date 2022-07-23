@@ -13,11 +13,14 @@ git clone https://github.com/brootware/regex-performance-benchmark.git && cd reg
 To run go's binary
 
 ```bash
-./go-regex/go-regex
+cd go-regex && go build -ldflags "-s -w" -o go-regex
+./go-regex
 ```
 
 To run rust's binary
 
 ```bash
-./rust-regex/src/rust-regex
+cd rust-regex && cargo build --release
+cp ../target/release/rust-regex .
+./rust-regex
 ```
